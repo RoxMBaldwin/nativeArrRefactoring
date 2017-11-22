@@ -1,0 +1,27 @@
+{
+  "name": "refactoringLoops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "loops.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoxMBaldwin/nativeArrRefactoring.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RoxMBaldwin/nativeArrRefactoring/issues"
+  },
+  "homepage": "https://github.com/RoxMBaldwin/nativeArrRefactoring#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}

@@ -16,8 +16,8 @@
 
 const toSentence = function(arr){
   let joinNames = arr.reduce((sentance, name, currentIndex, names) => {
-    if ( currentIndex > names.length - 2  ){
-      sentance += ' and ' + name
+    if ( currentIndex === names.length - 2  ){
+      sentance += name + ' and '
     } else if ( currentIndex === names.length - 1 ){
       sentance += name
     } else {
@@ -28,13 +28,9 @@ const toSentence = function(arr){
   return joinNames
 }
 
-// let nameArr = ["Sue", "Will", "Rachel", "Roxx"]
-//
-// toSentence(nameArr)
-
 // If you pass 1 it should return [1]
 // If you pass 3 it should return [1,2,3]
-function arrayONumbers(num) {
+function arrayOfNumbers(num) {
     var result = [];
     for (var i = 1; i <= num; i++) {
         result.push(i);
@@ -75,17 +71,14 @@ function replaceNum(arr, from, to) {
 
 const replace = function(arr, from, to){
   let replaced = arr.map((num, index) => {
-    //console.log(arr[index]);
     if (arr[index] === from ){
       return num = to
     } else {
       return num
     }
   })
-  console.log(replaced);
+  return replaced
 }
-
-replace([1, 3, 2, 1, 3], 3, 6)
 
 // TESTS
 // TODO: write actual tests
@@ -93,3 +86,10 @@ replace([1, 3, 2, 1, 3], 3, 6)
 //console.log("arrayOfNumbers", arrayOfNumbers(3)[2] === 3)
 //console.log("acronym", acronym(["Java", "Script", "Object", "Notation"]) === "JSON")
 //console.log("replace", replace([1, 3, 2, 1, 3], 1, 4)[0] === 4)
+
+module.exports = {
+  toSentence,
+  arrayOfNumbers,
+  acronym,
+  replace
+}
