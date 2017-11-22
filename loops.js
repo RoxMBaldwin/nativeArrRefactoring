@@ -62,7 +62,7 @@ const acronym = function(arr){
 }
 
 // Given [1, 3, 2, 1, 3], 1, and 4, then return [4, 3, 2, 4, 3]
-function replace(arr, from, to) {
+function replaceNum(arr, from, to) {
   var result = [];
   for (var i = 0; i < arr.length; i++) {
       result.push(arr[i]);
@@ -72,6 +72,20 @@ function replace(arr, from, to) {
   }
   return result;
 }
+
+const replace = function(arr, from, to){
+  let replaced = arr.map((num, index) => {
+    //console.log(arr[index]);
+    if (arr[index] === from ){
+      return num = to
+    } else {
+      return num
+    }
+  })
+  console.log(replaced);
+}
+
+replace([1, 3, 2, 1, 3], 3, 6)
 
 // TESTS
 // TODO: write actual tests
